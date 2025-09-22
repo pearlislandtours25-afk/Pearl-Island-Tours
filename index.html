@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-    <!-- CSS කේතය නොවෙනස්ව පවතී -->
     <style>
         /* මූලික සැකසුම් */
         body {
@@ -66,6 +65,12 @@
 
         nav a:hover {
             color: #007BFF;
+        }
+
+        /* *** Active link එක සඳහා style එක *** */
+        nav a.active {
+            color: #007BFF;
+            text-decoration: underline;
         }
 
         /* Hero Section (පිළිගැනීමේ විශාල කොටස) */
@@ -210,22 +215,23 @@
         <div class="header-content">
             <div class="logo">Pearl Island Tours</div>
             <nav>
-                <a href="#home">Home</a>
-                <a href="#tours">Tours</a>
-                <a href="#about">About</a>
-                <a href="#contact.html">Contact</a>
+                <!-- *** මෙතන class="active" එකතු කර, ලින්ක් යාවත්කාලීන කළා *** -->
+                <a href="index.html" class="active">Home</a>
+                <a href="#">Tours</a> <!-- tours.html පසුව හදමු -->
+                <a href="#">About</a> <!-- about.html පසුව හදමු -->
+                <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
 
-    <section id="home" class="hero">
+    <section class="hero">
         <h1>Experience the Wonder of Sri Lanka</h1>
         <p>Your unforgettable journey to the Pearl of the Indian Ocean starts here. Let us craft your dream vacation.</p>
         <a href="#tours" class="hero-button">Explore Our Tours</a>
     </section>
 
     <main class="container">
-        <section id="about" class="intro-section">
+        <section class="intro-section">
             <h2>Why Travel With Us?</h2>
             <p>
                 We are a team of passionate local experts dedicated to showcasing the authentic beauty of Sri Lanka. 
@@ -238,7 +244,6 @@
             <div class="tours-grid">
                 <!-- Tour Card 1 -->
                 <div class="tour-card">
-                    <!-- වැදගත්: මෙතන ඔබේ පින්තූරයේ නම හරියටම යොදන්න -->
                     <img src="./images/cultural-triangle.jpg" alt="Sigiriya Rock Fortress">
                     <div class="tour-card-content">
                         <h3>Ancient Kingdoms Tour</h3>
@@ -248,7 +253,6 @@
                 </div>
                 <!-- Tour Card 2 -->
                 <div class="tour-card">
-                    <!-- වැදගත්: මෙතන ඔබේ පින්තූරයේ නම හරියටම යොදන්න -->
                     <img src="./images/tea-country.jpg" alt="Tea plantations in Sri Lanka's hill country">
                     <div class="tour-card-content">
                         <h3>Misty Mountains & Tea Trails</h3>
@@ -258,7 +262,6 @@
                 </div>
                 <!-- Tour Card 3 -->
                 <div class="tour-card">
-                    <!-- වැදගත්: මෙතන ඔබේ පින්තූරයේ නම හරියටම යොදන්න -->
                     <img src="./images/southern-beach.jpg" alt="A golden beach on the south coast of Sri Lanka">
                     <div class="tour-card-content">
                         <h3>Sun, Sand & Southern Coasts</h3>
@@ -270,11 +273,10 @@
         </section>
     </main>
 
-    <footer id="contact">
+    <footer id="contact-footer">
         <p>&copy; 2025 Pearl Island Tours - Sri Lanka. All Rights Reserved.</p>
     </footer>
 
 </body>
 </html>
-
 

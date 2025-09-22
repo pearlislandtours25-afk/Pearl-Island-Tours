@@ -29,9 +29,9 @@
 
         /* Header (ඉහළම කොටස) */
         header {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(10px);
-            padding: 1rem 0;
+            padding: 0.8rem 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
@@ -54,6 +54,12 @@
             color: #2c3e50;
             font-family: 'Playfair Display', serif;
         }
+        
+        /* Navigation Styles */
+        nav {
+            display: flex;
+            align-items: center;
+        }
 
         nav a {
             color: #555;
@@ -63,19 +69,31 @@
             transition: color 0.3s;
         }
 
-        nav a:hover {
+        nav a:hover, nav a.active {
             color: #007BFF;
         }
 
-        /* *** Active link එක සඳහා style එක *** */
-        nav a.active {
-            color: #007BFF;
-            text-decoration: underline;
+        /* *** අලුතින් එකතු කළ Book Now බොත්තම *** */
+        .cta-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-left: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
-        /* Hero Section (පිළිගැනීමේ විශාල කොටස) */
+        .cta-button:hover {
+            background-color: #0056b3;
+            color: white; /* Ensure text color remains white on hover */
+            transform: scale(1.05);
+        }
+
+        /* Hero Section සහ අනෙකුත් කොටස් නොවෙනස්ව පවතී... */
         .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.pexels.com/photos/1603658/pexels-photo-1603658.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./images/hero-background.jpg'); /* Assuming you have a hero image */
             background-size: cover;
             background-position: center;
             color: white;
@@ -88,125 +106,24 @@
             min-height: 80vh;
         }
         
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 2rem auto;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-        }
-
-        .hero-button {
-            background-color: #007BFF;
-            color: white;
-            padding: 1rem 2.5rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 700;
-            transition: background-color 0.3s, transform 0.3s;
-            font-size: 1rem;
-        }
-        
-        .hero-button:hover {
-            background-color: #0056b3;
-            transform: translateY(-3px);
-        }
-        
-        /* Main Content (ප්‍රධාන අන්තර්ගතය) */
-        main {
-            padding-top: 2rem;
-        }
-        
-        .intro-section {
-            background-color: #ffffff;
-            padding: 3rem 2rem;
-            border-radius: 8px;
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-
-        .intro-section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        /* Featured Tours Section */
-        .featured-tours {
-            padding: 2rem 0;
-        }
-
-        .featured-tours h2 {
-            text-align: center;
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .tours-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .tour-card {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .tour-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        .tour-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .tour-card-content {
-            padding: 1.5rem;
-        }
-
-        .tour-card h3 {
-            margin-top: 0;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .tour-card-button {
-            display: inline-block;
-            background-color: #2c3e50;
-            color: white;
-            padding: 0.7rem 1.5rem;
-            text-decoration: none;
-            border-radius: 50px;
-            margin-top: 1rem;
-            font-weight: 700;
-            transition: background-color 0.3s;
-        }
-        
-        .tour-card-button:hover {
-            background-color: #46637e;
-        }
-
-        /* Footer (පහළම කොටස) */
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.6); }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem auto; text-shadow: 1px 1px 4px rgba(0,0,0,0.7); }
+        .hero-button { background-color: #007BFF; color: white; padding: 1rem 2.5rem; text-decoration: none; border-radius: 50px; font-weight: 700; transition: background-color 0.3s, transform 0.3s; font-size: 1rem; }
+        .hero-button:hover { background-color: #0056b3; transform: translateY(-3px); }
+        main { padding-top: 2rem; }
+        .intro-section { background-color: #ffffff; padding: 3rem 2rem; border-radius: 8px; margin-bottom: 3rem; text-align: center; }
+        .intro-section h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1rem; }
+        .featured-tours { padding: 2rem 0; }
+        .featured-tours h2 { text-align: center; font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 2.5rem; }
+        .tours-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+        .tour-card { background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+        .tour-card:hover { transform: translateY(-10px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .tour-card img { width: 100%; height: 220px; object-fit: cover; }
+        .tour-card-content { padding: 1.5rem; }
+        .tour-card h3 { margin-top: 0; font-family: 'Playfair Display', serif; }
+        .tour-card-button { display: inline-block; background-color: #2c3e50; color: white; padding: 0.7rem 1.5rem; text-decoration: none; border-radius: 50px; margin-top: 1rem; font-weight: 700; transition: background-color 0.3s; }
+        .tour-card-button:hover { background-color: #46637e; }
+        footer { background-color: #2c3e50; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
     </style>
 </head>
 <body>
@@ -215,21 +132,22 @@
         <div class="header-content">
             <div class="logo">Pearl Island Tours</div>
             <nav>
-                <!-- *** මෙතන class="active" එකතු කර, ලින්ක් යාවත්කාලීන කළා *** -->
                 <a href="index.html" class="active">Home</a>
-                <a href="#">Tours</a> <!-- tours.html පසුව හදමු -->
-                <a href="#">About</a> <!-- about.html පසුව හදමු -->
+                <a href="#">Tours</a>
+                <a href="#">About</a>
                 <a href="contact.html">Contact</a>
+                <!-- *** මෙන්න අලුත් බොත්තම *** -->
+                <a href="contact.html" class="cta-button">Book Now</a>
             </nav>
         </div>
     </header>
 
+    <!-- ... (Rest of the index.html content remains the same) ... -->
     <section class="hero">
         <h1>Experience the Wonder of Sri Lanka</h1>
         <p>Your unforgettable journey to the Pearl of the Indian Ocean starts here. Let us craft your dream vacation.</p>
         <a href="#tours" class="hero-button">Explore Our Tours</a>
     </section>
-
     <main class="container">
         <section class="intro-section">
             <h2>Why Travel With Us?</h2>
@@ -238,11 +156,9 @@
                 From personalized itineraries to hand-picked accommodations and expert guides, we handle every detail to ensure you have a seamless and memorable adventure.
             </p>
         </section>
-
         <section id="tours" class="featured-tours">
             <h2>Our Most Popular Tours</h2>
             <div class="tours-grid">
-                <!-- Tour Card 1 -->
                 <div class="tour-card">
                     <img src="./images/cultural-triangle.jpg" alt="Sigiriya Rock Fortress">
                     <div class="tour-card-content">
@@ -251,7 +167,6 @@
                         <a href="#" class="tour-card-button">Learn More</a>
                     </div>
                 </div>
-                <!-- Tour Card 2 -->
                 <div class="tour-card">
                     <img src="./images/tea-country.jpg" alt="Tea plantations in Sri Lanka's hill country">
                     <div class="tour-card-content">
@@ -260,7 +175,6 @@
                         <a href="#" class="tour-card-button">Learn More</a>
                     </div>
                 </div>
-                <!-- Tour Card 3 -->
                 <div class="tour-card">
                     <img src="./images/southern-beach.jpg" alt="A golden beach on the south coast of Sri Lanka">
                     <div class="tour-card-content">
@@ -272,8 +186,7 @@
             </div>
         </section>
     </main>
-
-    <footer id="contact-footer">
+    <footer>
         <p>&copy; 2025 Pearl Island Tours - Sri Lanka. All Rights Reserved.</p>
     </footer>
 

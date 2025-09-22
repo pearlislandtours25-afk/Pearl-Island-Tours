@@ -66,6 +66,13 @@
             color: #007BFF;
         }
 
+        /* *** අලුතින් එකතු කළ කොටස *** */
+        /* Active link එක සඳහා style එක */
+        nav a.active {
+            color: #007BFF;
+            text-decoration: underline;
+        }
+
         /* Page Header (පිටුවේ මාතෘකාව) */
         .page-header {
             background-color: #e9ecef;
@@ -183,7 +190,8 @@
                 <a href="index.html">Home</a>
                 <a href="#">Tours</a> <!-- We will create tours.html later -->
                 <a href="#">About</a>
-                <a href="contact.html">Contact</a>
+                <!-- *** මෙතන class="active" එකතු කළා *** -->
+                <a href="contact.html" class="active">Contact</a>
             </nav>
         </div>
     </header>
@@ -242,3 +250,4 @@
 
 </body>
 </html>
+

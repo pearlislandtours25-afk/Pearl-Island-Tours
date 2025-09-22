@@ -3,47 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- වෙබ් අඩවියේ නම (Browser Tab එකේ පේන) -->
     <title>Pearl Island Tours - Sri Lanka</title>
-    
-    <!-- SEO විස්තරය (Google සෙවුම් සඳහා) -->
     <meta name="description" content="Discover the wonders of Sri Lanka with Pearl Island Tours. We offer unforgettable travel experiences, custom tour packages, and guided adventures across the beautiful island.">
     
-    <!-- Google Fonts (Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-    <!-- CSS Styles: වෙබ් අඩවියේ පෙනුම සකසන කොටස -->
     <style>
         /* මූලික සැකසුම් */
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
         }
 
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 2rem;
+        }
+
         /* Header (ඉහළම කොටස) */
         header {
-            background-color: #ffffff;
-            padding: 1rem 2rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 2rem;
         }
 
-        header .logo {
+        .logo {
             font-size: 1.5rem;
             font-weight: 700;
             color: #2c3e50;
+            font-family: 'Playfair Display', serif;
         }
 
-        /* Navigation Menu (මෙනුව) */
         nav a {
             color: #555;
             text-decoration: none;
@@ -58,16 +69,22 @@
 
         /* Hero Section (පිළිගැනීමේ විශාල කොටස) */
         .hero {
-            background-image: url('https://placehold.co/1500x600/5E8B7E/FFFFFF?text=Welcome+to+Sri+Lanka');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.pexels.com/photos/1603658/pexels-photo-1603658.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
-            padding: 6rem 1rem;
+            padding: 12rem 1rem 8rem 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
         }
         
         .hero h1 {
-            font-size: 3rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
         }
@@ -82,30 +99,98 @@
         .hero-button {
             background-color: #007BFF;
             color: white;
-            padding: 1rem 2rem;
+            padding: 1rem 2.5rem;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 50px;
             font-weight: 700;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 1rem;
         }
         
         .hero-button:hover {
             background-color: #0056b3;
+            transform: translateY(-3px);
         }
         
         /* Main Content (ප්‍රධාන අන්තර්ගතය) */
         main {
-            padding: 2rem;
-            max-width: 1200px;
-            margin: auto;
-            text-align: center;
+            padding-top: 2rem;
         }
         
         .intro-section {
             background-color: #ffffff;
-            padding: 2rem;
+            padding: 3rem 2rem;
             border-radius: 8px;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .intro-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Featured Tours Section */
+        .featured-tours {
+            padding: 2rem 0;
+        }
+
+        .featured-tours h2 {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .tours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .tour-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tour-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .tour-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .tour-card-content {
+            padding: 1.5rem;
+        }
+
+        .tour-card h3 {
+            margin-top: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .tour-card-button {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 1rem;
+            font-weight: 700;
+            transition: background-color 0.3s;
+        }
+        
+        .tour-card-button:hover {
+            background-color: #46637e;
         }
 
         /* Footer (පහළම කොටස) */
@@ -113,46 +198,78 @@
             background-color: #2c3e50;
             color: white;
             text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
+            padding: 2rem;
+            margin-top: 3rem;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
-        <div class="logo">Pearl Island Tours</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="tours.html">Tours</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <div class="header-content">
+            <div class="logo">Pearl Island Tours</div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#tours">Tours</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <section id="home" class="hero">
         <h1>Experience the Wonder of Sri Lanka</h1>
         <p>Your unforgettable journey to the Pearl of the Indian Ocean starts here. Let us craft your dream vacation.</p>
-        <a href="tours.html" class="hero-button">Explore Our Tours</a>
+        <a href="#tours" class="hero-button">Explore Our Tours</a>
     </section>
 
-    <!-- Main Content Section -->
-    <main>
-        <section class="intro-section">
+    <main class="container">
+        <section id="about" class="intro-section">
             <h2>Why Travel With Us?</h2>
             <p>
                 We are a team of passionate local experts dedicated to showcasing the authentic beauty of Sri Lanka. 
                 From personalized itineraries to hand-picked accommodations and expert guides, we handle every detail to ensure you have a seamless and memorable adventure.
             </p>
         </section>
+
+        <section id="tours" class="featured-tours">
+            <h2>Our Most Popular Tours</h2>
+            <div class="tours-grid">
+                <!-- Tour Card 1 -->
+                <div class="tour-card">
+                    <img src="https://placehold.co/400x250/A6855D/FFFFFF?text=Cultural+Triangle" alt="Image of the Cultural Triangle">
+                    <div class="tour-card-content">
+                        <h3>Ancient Kingdoms Tour</h3>
+                        <p>Explore the heart of Sri Lanka's history. Visit ancient cities, magnificent stupas, and the iconic Sigiriya Rock Fortress.</p>
+                        <a href="#" class="tour-card-button">Learn More</a>
+                    </div>
+                </div>
+                <!-- Tour Card 2 -->
+                <div class="tour-card">
+                    <img src="https://placehold.co/400x250/466964/FFFFFF?text=Misty+Mountains" alt="Image of misty mountains with tea plantations">
+                    <div class="tour-card-content">
+                        <h3>Misty Mountains & Tea Trails</h3>
+                        <p>Journey through breathtaking hill country landscapes, visit lush tea plantations, and enjoy the cool climate of Nuwara Eliya.</p>
+                        <a href="#" class="tour-card-button">Learn More</a>
+                    </div>
+                </div>
+                <!-- Tour Card 3 -->
+                <div class="tour-card">
+                    <img src="https://placehold.co/400x250/F2D6A2/333333?text=Golden+Beaches" alt="Image of a golden beach in Sri Lanka">
+                    <div class="tour-card-content">
+                        <h3>Sun, Sand & Southern Coasts</h3>
+                        <p>Relax on pristine golden beaches, discover the charming Galle Fort, and witness incredible marine life on the south coast.</p>
+                        <a href="#" class="tour-card-button">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer Section -->
-    <footer>
+    <footer id="contact">
         <p>&copy; 2025 Pearl Island Tours - Sri Lanka. All Rights Reserved.</p>
     </footer>
 
 </body>
 </html>
+

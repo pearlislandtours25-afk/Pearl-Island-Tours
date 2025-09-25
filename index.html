@@ -1,100 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ... head ... -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pearl Island Tours - Sri Lanka</title>
     <meta name="description" content="Discover the wonders of Sri Lanka with Pearl Island Tours. We offer unforgettable travel experiences, custom tour packages, and guided adventures across the beautiful island.">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
     <style>
-        /* මූලික සැකසුම් */
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 2rem;
-        }
-
-        /* Header (ඉහළම කොටස) */
-        header {
-            background-color: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            padding: 0.8rem 0; /* ලාංඡනයට ඉඩ දීමට padding වැඩි කළා */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 2rem;
-        }
-
-        /* *** අලුත් Logo Styles *** */
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        .logo img {
-            height: 75px; /* ලාංඡනයේ උස 60px සිට 75px දක්වා වැඩි කළා */
-            width: auto;
-        }
-        
-        /* Navigation Styles */
-        nav {
-            display: flex;
-            align-items: center;
-        }
-
-        nav a {
-            color: #555;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: 700;
-            transition: color 0.3s;
-        }
-
-        nav a:hover, nav a.active {
-            color: #007BFF;
-        }
-
-        .cta-button {
-            background-color: #007BFF;
-            color: white;
-            padding: 0.6rem 1.2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #0056b3;
-            color: white;
-            transform: scale(1.05);
-        }
-        
-        /* අනෙකුත් කොටස් නොවෙනස්ව පවතී */
-        .hero { background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./images/hero-background.jpg'); background-size: cover; background-position: center; color: white; text-align: center; padding: 12rem 1rem 8rem 1rem; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 80vh; }
+        /* ... styles ... */
+        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; line-height: 1.6; }
+        .container { max-width: 1200px; margin: auto; padding: 0 2rem; }
+        header { background-color: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); padding: 0.8rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; padding: 0 2rem; }
+        .logo { display: flex; align-items: center; }
+        .logo img { height: 75px; width: auto; }
+        nav { display: flex; align-items: center; }
+        nav a { color: #555; text-decoration: none; margin: 0 1rem; font-weight: 700; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: #007BFF; }
+        .cta-button { background-color: #007BFF; color: white; padding: 0.6rem 1.2rem; border-radius: 50px; text-decoration: none; font-weight: 700; margin-left: 1rem; transition: all 0.3s ease; }
+        .cta-button:hover { background-color: #0056b3; color: white; transform: scale(1.05); }
+        .hero { background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.pexels.com/photos/1603658/pexels-photo-1603658.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center; color: white; text-align: center; padding: 12rem 1rem 8rem 1rem; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 80vh; }
         .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.6); }
         .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem auto; text-shadow: 1px 1px 4px rgba(0,0,0,0.7); }
         .hero-button { background-color: #007BFF; color: white; padding: 1rem 2.5rem; text-decoration: none; border-radius: 50px; font-weight: 700; transition: background-color 0.3s, transform 0.3s; font-size: 1rem; }
@@ -116,29 +44,69 @@
     </style>
 </head>
 <body>
-
     <header>
         <div class="header-content">
-            <!-- *** මෙන්න අලුත් ලාංඡනය *** -->
             <a href="index.html" class="logo">
                 <img src="./images/logo.png" alt="Pearl Island Tours Logo">
             </a>
             <nav>
                 <a href="index.html" class="active">Home</a>
                 <a href="tours.html">Tours</a>
+                <a href="accommodation.html">Our Villa</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
                 <a href="contact.html" class="cta-button">Book Now</a>
             </nav>
         </div>
     </header>
-    
-    <!-- (Rest of the index.html content remains the same) -->
-    <section class="hero"><h1>Experience the Wonder of Sri Lanka</h1><p>Your unforgettable journey to the Pearl of the Indian Ocean starts here. Let us craft your dream vacation.</p><a href="#tours" class="hero-button">Explore Our Tours</a></section><main class="container"><section class="intro-section"><h2>Why Travel With Us?</h2><p>We are a team of passionate local experts dedicated to showcasing the authentic beauty of Sri Lanka. From personalized itineraries to hand-picked accommodations and expert guides, we handle every detail to ensure you have a seamless and memorable adventure.</p></section><section id="tours" class="featured-tours"><h2>Our Most Popular Tours</h2><div class="tours-grid"><div class="tour-card"><img src="./images/cultural-triangle.jpg" alt="Sigiriya Rock Fortress"><div class="tour-card-content"><h3>Ancient Kingdoms Tour</h3><p>Explore the heart of Sri Lanka's history. Visit ancient cities, magnificent stupas, and the iconic Sigiriya Rock Fortress.</p><a href="#" class="tour-card-button">Learn More</a></div></div><div class="tour-card"><img src="./images/tea-country.jpg" alt="Tea plantations in Sri Lanka's hill country"><div class="tour-card-content"><h3>Misty Mountains & Tea Trails</h3><p>Journey through breathtaking hill country landscapes, visit lush tea plantations, and enjoy the cool climate of Nuwara Eliya.</p><a href="#" class="tour-card-button">Learn More</a></div></div><div class="tour-card"><img src="./images/southern-beach.jpg" alt="A golden beach on the south coast of Sri Lanka"><div class="tour-card-content"><h3>Sun, Sand & Southern Coasts</h3><p>Relax on pristine golden beaches, discover the charming Galle Fort, and witness incredible marine life on the south coast.</p><a href="#" class="tour-card-button">Learn More</a></div></div></div></section></main><footer><p>&copy; 2025 Pearl Island Tours - Sri Lanka. All Rights Reserved.</p></footer>
-
+    <!-- ... body content ... -->
+    <section id="home" class="hero">
+        <h1>Experience the Wonder of Sri Lanka</h1>
+        <p>Your unforgettable journey to the Pearl of the Indian Ocean starts here. Let us craft your dream vacation.</p>
+        <a href="tours.html" class="hero-button">Explore Our Tours</a>
+    </section>
+    <main class="container">
+        <section id="about-preview" class="intro-section">
+            <h2>Why Travel With Us?</h2>
+            <p>
+                We are a team of passionate local experts dedicated to showcasing the authentic beauty of Sri Lanka. 
+                From personalized itineraries to hand-picked accommodations and expert guides, we handle every detail to ensure you have a seamless and memorable adventure.
+            </p>
+        </section>
+        <section id="tours-preview" class="featured-tours">
+            <h2>Our Most Popular Tours</h2>
+            <div class="tours-grid">
+                <div class="tour-card">
+                    <img src="./images/cultural-triangle.jpg" alt="Sigiriya Rock Fortress">
+                    <div class="tour-card-content">
+                        <h3>Ancient Kingdoms Tour</h3>
+                        <p>Explore the heart of Sri Lanka's history. Visit ancient cities, magnificent stupas, and the iconic Sigiriya Rock Fortress.</p>
+                        <a href="tours.html" class="tour-card-button">Learn More</a>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <img src="./images/tea-country.jpg" alt="Tea plantations in Sri Lanka's hill country">
+                    <div class="tour-card-content">
+                        <h3>Misty Mountains & Tea Trails</h3>
+                        <p>Journey through breathtaking hill country landscapes, visit lush tea plantations, and enjoy the cool climate of Nuwara Eliya.</p>
+                        <a href="tours.html" class="tour-card-button">Learn More</a>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <img src="./images/southern-beach.jpg" alt="A golden beach on the south coast of Sri Lanka">
+                    <div class="tour-card-content">
+                        <h3>Sun, Sand & Southern Coasts</h3>
+                        <p>Relax on pristine golden beaches, discover the charming Galle Fort, and witness incredible marine life on the south coast.</p>
+                        <a href="tours.html" class="tour-card-button">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Pearl Island Tours - Sri Lanka. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
-
-
 
 

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Tours - Pearl Island Tours</title>
+    <meta name="description" content="Explore our curated tour packages across Sri Lanka. From cultural heritage sites to misty mountains and golden beaches, find your perfect adventure.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* මූලික සැකසුම් සහ හෙඩරය (අනෙක් පිටු වලට සමානයි) */
+        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; line-height: 1.6; }
+        .container { max-width: 1200px; margin: auto; padding: 0 2rem; }
+        header { background-color: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); padding: 0.8rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; padding: 0 2rem; }
+        .logo { display: flex; align-items: center; }
+        .logo img { height: 75px; width: auto; }
+        nav { display: flex; align-items: center; }
+        nav a { color: #555; text-decoration: none; margin: 0 1rem; font-weight: 700; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: #007BFF; }
+        .cta-button { background-color: #007BFF; color: white; padding: 0.6rem 1.2rem; border-radius: 50px; text-decoration: none; font-weight: 700; margin-left: 1rem; transition: all 0.3s ease; }
+        .cta-button:hover { background-color: #0056b3; color: white; transform: scale(1.05); }
+
+        /* පිටුවේ මාතෘකාව */
+        .page-header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/1034662/pexels-photo-1034662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 6rem 1rem;
+            color: white;
+        }
+        .page-header h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin: 0; text-shadow: 2px 2px 8px rgba(0,0,0,0.6); }
+
+        /* Tours Grid */
+        main { padding: 4rem 0; }
+        .tours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+        }
+        .tour-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .tour-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+        .tour-card-image {
+            height: 240px;
+            overflow: hidden;
+        }
+        .tour-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .tour-card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .tour-card-content h3 { font-family: 'Playfair Display', serif; margin-top: 0; font-size: 1.5rem; }
+        .tour-meta {
+            display: flex;
+            align-items: center;
+            color: #555;
+            font-size: 0.9rem;
+            margin: 0.5rem 0 1rem 0;
+        }
+        .tour-meta svg {
+            width: 16px;
+            height: 16px;
+            margin-right: 0.5rem;
+        }
+        .tour-meta span { margin-right: 1.5rem; }
+        .tour-card-content p {
+            flex-grow: 1;
+        }
+        .inquire-button {
+            display: inline-block;
+            text-align: center;
+            background-color: #2c3e50;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 1rem;
+            font-weight: 700;
+            transition: background-color 0.3s;
+        }
+        .inquire-button:hover { background-color: #46637e; }
+        
+        /* Footer (අනෙක් පිටු වලට සමානයි) */
+        footer { background-color: #2c3e50; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="./images/logo.png" alt="Pearl Island Tours Logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="tours.html" class="active">Tours</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="cta-button">Book Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <h1>Our Tour Packages</h1>
+    </section>
+
+    <main class="container">
+        <div class="tours-grid">
+            
+            <!-- Tour Card 1 -->
+            <div class="tour-card">
+                <div class="tour-card-image"><img src="./images/cultural-triangle.jpg" alt="Sigiriya Rock Fortress"></div>
+                <div class="tour-card-content">
+                    <h3>Ancient Kingdoms Tour</h3>
+                    <div class="tour-meta">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25M12 21.75a9.75 9.75 0 1 1 0-19.5 9.75 9.75 0 0 1 0 19.5M12 6a.75.75 0 0 0-.75.75v5.25H8.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 .75-.75V6.75A.75.75 0 0 0 12 6"/></svg>5 Days / 4 Nights</span>
+                    </div>
+                    <p>Explore the heart of Sri Lanka's history. Visit ancient cities, magnificent stupas, and the iconic Sigiriya Rock Fortress.</p>
+                    <a href="contact.html" class="inquire-button">Inquire Now</a>
+                </div>
+            </div>
+
+            <!-- Tour Card 2 -->
+            <div class="tour-card">
+                <div class="tour-card-image"><img src="./images/tea-country.jpg" alt="Tea plantations in Sri Lanka's hill country"></div>
+                <div class="tour-card-content">
+                    <h3>Misty Mountains & Tea Trails</h3>
+                    <div class="tour-meta">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25M12 21.75a9.75 9.75 0 1 1 0-19.5 9.75 9.75 0 0 1 0 19.5M12 6a.75.75 0 0 0-.75.75v5.25H8.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 .75-.75V6.75A.75.75 0 0 0 12 6"/></svg>7 Days / 6 Nights</span>
+                    </div>
+                    <p>Journey through breathtaking hill country landscapes, visit lush tea plantations, and enjoy the cool climate of Nuwara Eliya.</p>
+                    <a href="contact.html" class="inquire-button">Inquire Now</a>
+                </div>
+            </div>
+
+            <!-- Tour Card 3 -->
+            <div class="tour-card">
+                <div class="tour-card-image"><img src="./images/southern-beach.jpg" alt="A golden beach on the south coast of Sri Lanka"></div>
+                <div class="tour-card-content">
+                    <h3>Sun, Sand & Southern Coasts</h3>
+                    <div class="tour-meta">
+                         <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25M12 21.75a9.75 9.75 0 1 1 0-19.5 9.75 9.75 0 0 1 0 19.5M12 6a.75.75 0 0 0-.75.75v5.25H8.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 .75-.75V6.75A.75.75 0 0 0 12 6"/></svg>6 Days / 5 Nights</span>
+                    </div>
+                    <p>Relax on pristine golden beaches, discover the charming Galle Fort, and witness incredible marine life on the south coast.</p>
+                    <a href="contact.html" class="inquire-button">Inquire Now</a>
+                </div>
+            </div>
+
+             <!-- ඔබට මෙතැනින් පහළට තවත් tour-card කොටස් කොපි කර අලවා, තොරතුරු වෙනස් කිරීමෙන් තවත් සංචාර එකතු කළ හැකිය. -->
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pearl Island Tours - Sri Lanka. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
